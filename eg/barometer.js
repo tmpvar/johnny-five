@@ -1,6 +1,7 @@
 var five = require("../lib/johnny-five"),
     // or "./lib/johnny-five" when running from the source
-    board = new five.Board();
+    board = new five.Board()
+    ;
 
 board.on("ready", function() {
 
@@ -8,8 +9,8 @@ board.on("ready", function() {
   // Optionally set the speed; defaults to 100ms
   var barometer = (new five.Barometer({
     device: 'MPL115A2',
-    freq: 1000,
-    temperature : true,
+    freq: 10,
+    temperature : false,
     pressure : true
   }));
 
